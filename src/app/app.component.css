@@ -15,7 +15,6 @@
     grid-area: main;
     scrollbar-width: none;
     overflow-y: scroll;
-
     display: flex;
     flex-direction: column;
 }

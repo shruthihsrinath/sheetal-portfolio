@@ -10,22 +10,9 @@
     border-bottom: 1px solid;
 }
 
-.portfolio {
-    align-self: center;
-}
-
-.about {
-    align-self: center;
-}
-
-
-.contact {
-    align-self: center;
-}
-
-
 .style-link {
     padding: 20px;
+    color: black;
 }
 
 .style-link:hover {
