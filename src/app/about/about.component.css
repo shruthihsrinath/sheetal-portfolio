@@ -1,0 +1,34 @@
+:host {
+    flex-grow: 1;
+}
+
+.about-page {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+}
+
+.about-image {
+    margin-top: 10vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 40vw;
+    height: auto;
+    object-fit: cover;
+}
+
+.model-image {
+    width: 100%;
+    height: 100%;
+}
+
+.about-content {
+    margin-top: 10vh;
+    align-self: flex-start;
+    flex-grow: .5;
+}
+
+.heading {
+    font-size: 48px;
+}

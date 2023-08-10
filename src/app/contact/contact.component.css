@@ -1,0 +1,23 @@
+:host {
+    flex-grow: 1;
+}
+
+.contact-page {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.instagram-link {
+    text-align: center;
+}
+
+.instagram-link .image {
+    margin: 4px;
+    vertical-align: middle;
+}
+
+.heading {
+    font-size: 48px;
+}

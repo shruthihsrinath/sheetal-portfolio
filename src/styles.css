@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap');
+
+html {
+    /* background: linear-gradient(180deg, rgba(255, 185, 222, 1) 35%, rgba(216, 196, 255, 1) 100%); */
+    background: linear-gradient(180deg, rgba(255, 185, 225, 1) 35%, rgba(255, 229, 196, 1) 100%);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    color: black;
+}
+
+body {
+    margin: 0;
+}

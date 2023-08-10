@@ -1,0 +1,13 @@
+<article class="collab-page">
+    <section>
+        <h2>
+            {{collabName}}
+        </h2>
+        <hr class="seperator" />
+        <ul class="image-gallery">
+            <li *ngFor="let image of collabImages" class="collab">
+                <img src="{{image.url}}" class="collab-image" alt="{{image.altText}}">
+            </li>
+        </ul>
+    </section>
+</article>
