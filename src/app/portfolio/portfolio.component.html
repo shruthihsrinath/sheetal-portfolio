@@ -1,14 +1,15 @@
 <article class="portfolio-page">
-    <h2 class="heading">COLLABORATION</h2>
-    <hr class="seperator" /><br />
+    <h2 class="heading">COLLABS</h2><br />
+    <!-- <hr class="seperator" /><br /> -->
     <div class="collab-container">
-        <img src="../../assets/sheetal-koskii.jpg" alt="image, for koskii collaboration link" class="collab-image"
-            (click)="onClick($event)">
-        <div class="collab-content">
-            <a class="collab-text" href="/portfolio/collaboration">
-                KOSKII <br>
-                <hr class="link-line" />
-            </a>
+        <div class="collab-card" *ngFor="let image of collabData">
+            <img src="{{image.url}}" alt="image, for koskii collaboration link" class="collab-image"
+                (click)="onClick(collabtext.title)">
+            <div class="collab-content">
+                <a #collabtext title="{{image.collabName}}" class="collab-text" [routerLink]="[image.collabName]">
+                    {{image.collabName}}
+                </a>
+            </div>
         </div>
     </div>
 </article>

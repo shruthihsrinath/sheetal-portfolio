@@ -12,12 +12,12 @@
 }
 
 .open-image {
-    margin-top: 10vh;
+    margin-top: 20px;
     display: flex;
     flex-flow: column;
     align-items: center;
-    width: 25vw;
-    max-width: 500px;
+    width: 40vw;
+    min-width: 200px;
     height: auto;
     object-fit: cover;
 }

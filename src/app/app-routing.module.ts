@@ -22,7 +22,7 @@ const routes: Routes = [
     loadChildren: () => import('../app/contact/contact.module').then(m => m.ContactModule)
   },
   {
-    path: 'portfolio/collaboration',
+    path: 'portfolio/:collabName',
     loadChildren: () => import('../app/collaboration/collaboration.module').then(m => m.CollaborationModule)
   },
   {
