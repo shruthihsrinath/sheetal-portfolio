@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap');
 
 html {
-    /* background: linear-gradient(180deg, rgba(255, 185, 222, 1) 35%, rgba(216, 196, 255, 1) 100%); */
     background: linear-gradient(180deg, rgba(255, 185, 225, 1) 35%, rgba(255, 229, 196, 1) 100%);
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -24,6 +23,11 @@ body {
 * {
     scrollbar-width: auto;
     scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+*::-webkit-scrollbar {
+    height: 12px;
+    background: var(--scrollbarBG);
 }
 
 *::-webkit-scrollbar-track {

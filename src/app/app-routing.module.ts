@@ -27,7 +27,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: '/home',
     pathMatch: 'full'
   }
 ];
@@ -36,7 +36,9 @@ const routes: Routes = [
   declarations: [],
   imports: [
     CommonModule,
-    [RouterModule.forRoot(routes)]
+    [RouterModule.forRoot(routes, {
+      anchorScrolling: 'enabled'
+    })]
   ],
   exports: [RouterModule]
 })

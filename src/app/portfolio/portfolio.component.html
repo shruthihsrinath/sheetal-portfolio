@@ -1,19 +1,37 @@
 <article class="portfolio-page">
-    <ul class="image-gallery">
-        <li *ngFor="let image of portfolioImages" class="portfolio-card">
-            <img src="{{image.url}}" alt="{{image.altText}}" class="portfolio-image">
-        </li>
-    </ul>
-    <h2 class="heading">COLLABS</h2><br />
-    <hr class="seperator" /><br />
-    <div class="collab-container">
-        <div class="collab-card" *ngFor="let image of collabData">
-            <img src="{{image.url}}" alt="image, for koskii collaboration link" class="collab-image"
-                (click)="onClick(collabtext.title)">
-            <div class="collab-content">
-                <a #collabtext title="{{image.collabName}}" class="collab-text" [routerLink]="[image.collabName]">
-                    {{image.collabName}}
+    <div id="portfolio">
+        <ul class="image-gallery">
+            <li *ngFor="let image of portfolioImages" class="portfolio-card">
+                <a class="lightbox" title="click on image to zoom">
+                    <img src="{{image.url}}" alt="{{image.altText}}" class="portfolio-image" (click)="zoomImage(image)">
                 </a>
+            </li>
+        </ul>
+
+        <div class="lightbox-target" id="{{currentPortfolioId}}" [ngClass]="{ 'display-lightbox': showImage == true }">
+            <button class="lightbox-arrows direction-left" (click)="nextImage('left')" (keydown)="nextImage('left')">
+                <div class="lightbox-arrow lightbox-arrow-left"></div>
+            </button>
+            <img src="{{currentPortfolioUrl}}" class="lightbox-image" alt="{{currentPortfolioAlt}}" />
+            <button class="lightbox-arrows direction-right" (click)="nextImage('right')" (keydown)="nextImage('right')">
+                <div class="lightbox-arrow lightbox-arrow-right"></div>
+            </button>
+            <button type="button" class="lightbox-close" (click)="closeZoom()"></button>
+        </div>
+    </div>
+
+    <div id="collabs">
+        <h2 class="heading">COLLABS</h2><br />
+        <hr class="seperator" /><br />
+        <div class="collab-container">
+            <div class="collab-card" *ngFor="let image of collabData">
+                <img src="{{image.url}}" alt="image, for koskii collaboration link" class="collab-image"
+                    (click)="visitCollab(collabtext.title)">
+                <div class="collab-content">
+                    <a #collabtext title="{{image.collabName}}" class="collab-text" [routerLink]="[image.collabName]">
+                        {{image.collabName}}
+                    </a>
+                </div>
             </div>
         </div>
     </div>

@@ -35,7 +35,7 @@
 
 .heading {
     margin-bottom: 0;
-    padding-top: 10vh;
+    padding-top: 5vh;
 }
 
 .seperator {
@@ -131,4 +131,131 @@
     margin: 0;
     border: none;
     background-color: black;
+}
+
+.lightbox {
+    cursor: pointer;
+}
+
+.lightbox-target {
+    /* Default to hidden */
+    display: none;
+
+    /* Overlay entire screen */
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* A bit of padding around image */
+    padding: 1em;
+
+    /* Translucent background */
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-target.display-lightbox {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    opacity: 0;
+    animation: change 0.5s 0.2s forwards;
+    gap: 100px;
+}
+
+.lightbox-image {
+    /* Full width and height */
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+    transition: 3s;
+}
+
+.lightbox-close {
+    display: block;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background: white;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    top: -80px;
+    right: 0;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+.lightbox-close:before {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 1px;
+    background: black;
+    position: absolute;
+    left: 26px;
+    top: 10px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.lightbox-close:after {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 1px;
+    background: black;
+    position: absolute;
+    left: 26px;
+    top: 10px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.lightbox-close {
+    top: 0;
+}
+
+.lightbox-arrows {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 40px;
+    width: fit-content;
+}
+
+.lightbox-arrows.direction-right {
+    align-self: center;
+}
+
+.lightbox-arrows.direction-left {
+    align-self: center;
+}
+
+.lightbox-arrow {
+    object-fit: contain;
+    background-color: transparent;
+    height: 30px;
+    width: 30px;
+    padding: 50px;
+}
+
+.lightbox-arrow-right {
+    border-right: 2px solid #d1d5db;
+    border-top: 2px solid #d1d5db;
+    transform: translateX(-25%) rotate(45deg);
+}
+
+.lightbox-arrow-left {
+    border-left: 2px solid #d1d5db;
+    border-bottom: 2px solid #d1d5db;
+    transform: translateX(25%) rotate(45deg);
 }
