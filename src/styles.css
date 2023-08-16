@@ -12,8 +12,27 @@ html {
     font-family: 'Comfortaa', cursive;
     font-size: 20px;
     color: black;
+
+    --scrollbarBG: rgba(232, 82, 82, 0.179);
+    /* --scrollbarBG: rgba(225, 225, 225, 0.19); */
+    --thumbBG: rgba(0, 0, 0, .3);
 }
 
 body {
     margin: 0;
+}
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 6px;
+    --scrollbarBG: rgba(232, 82, 82, 0.179);
 }

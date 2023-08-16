@@ -6,6 +6,14 @@
     display: flex;
     flex-flow: row;
     justify-content: space-evenly;
+    opacity: 0;
+    animation: change .2s .2s forwards;
+}
+
+@keyframes change {
+    to {
+        opacity: 1;
+    }
 }
 
 .about-image {
@@ -21,6 +29,7 @@
 .model-image {
     width: 100%;
     height: 100%;
+    border-radius: 15px;
 }
 
 .about-content {

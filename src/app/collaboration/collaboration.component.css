@@ -7,28 +7,34 @@
     margin-right: 4vw;
     margin-top: 20px;
     opacity: 0;
-    animation: solidbackup 1s 1s forwards;
+    animation: solidbackup 0.5s 0.2s forwards;
 }
 
 .seperator {
-    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: black;
 }
 
 .image-gallery {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    padding: 0;
+    gap: 30px;
+    margin-top: 40px;
+    justify-content: center;
 }
 
 .collab {
     height: 70vh;
     overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
 }
 
 .collab-image {
     max-height: 100%;
-    min-width: 100%;
     object-fit: contain;
     vertical-align: bottom;
     transition: 3s;
