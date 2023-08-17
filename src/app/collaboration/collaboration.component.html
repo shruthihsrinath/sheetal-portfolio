@@ -1,7 +1,8 @@
 <article class="collab-page">
     <section>
-        <h2 style="margin: 0;">
-            {{collabName}}
+        <h2 class="heading">
+            <a *ngIf="isMobile == true" routerLink="/portfolio" class="portfolio-link">PORFOLIO</a><span
+                *ngIf="isMobile == true"> > </span> {{collabName}}
         </h2>
         <ul class="image-gallery">
             <li *ngFor="let image of collabData" class="collab">

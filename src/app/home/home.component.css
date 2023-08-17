@@ -7,7 +7,7 @@
 
 .home-page {
     display: flex;
-    flex-flow: row;
+    flex-flow: wrap;
     justify-content: space-around;
 }
 
@@ -17,7 +17,7 @@
     flex-flow: column;
     align-items: center;
     width: 40vw;
-    min-width: 200px;
+    min-width: 300px;
     height: auto;
     object-fit: cover;
 }
@@ -42,9 +42,10 @@
     font-family: 'Original Surfer', cursive;
     font-size: 70px;
     display: flex;
-    flex-flow: row;
+    flex-flow: wrap;
     column-gap: 1rem;
     animation: 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    justify-content: center;
 }
 
 .model-name>span {
@@ -83,5 +84,18 @@
     100% {
         opacity: 1;
         filter: blur(0);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .model-name {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .open-image {
+        width: 90vw;
+        height: auto;
     }
 }

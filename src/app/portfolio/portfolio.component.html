@@ -2,9 +2,10 @@
     <div id="portfolio">
         <ul class="image-gallery">
             <li *ngFor="let image of portfolioImages" class="portfolio-card">
-                <a class="lightbox" title="click on image to zoom">
+                <a class="lightbox" title="click on image to zoom" *ngIf="isMobile== false">
                     <img src="{{image.url}}" alt="{{image.altText}}" class="portfolio-image" (click)="zoomImage(image)">
                 </a>
+                <img src="{{image.url}}" alt="{{image.altText}}" class="portfolio-image" *ngIf="isMobile==true">
             </li>
         </ul>
 

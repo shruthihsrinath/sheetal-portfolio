@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Collab } from '../domain/collab.model';
 import { PortfolioService } from '../service/portfolio.service';
+import { fromEvent, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-portfolio',
@@ -14,6 +15,7 @@ export class PortfolioComponent implements OnInit {
   currentPortfolioUrl: string | undefined;
   currentPortfolioAlt: string | undefined;
   showImage: boolean;
+  isMobile: boolean = false;
 
   collabData: any = [
     {
@@ -33,6 +35,22 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void {
     this.portfolioService.getPortfolioData().subscribe((data: Collab[]) => {
       this.portfolioImages = data.filter(collab => collab.collabName == 'PORTFOLIO');
+    });
+
+    if (window.innerWidth <= 810) {
+      this.isMobile = true;
+    }
+    else {
+      this.isMobile = false;
+    }
+
+    fromEvent(window, 'resize').subscribe(() => {
+      if (window.innerWidth <= 810) {
+        this.isMobile = true;
+      }
+      else {
+        this.isMobile = false;
+      }
     });
   }
 

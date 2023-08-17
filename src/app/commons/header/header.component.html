@@ -1,4 +1,7 @@
 <section class="header-container">
+    <div class="name">
+        <a class="logo-link" routerLink="/home">SHEETAL SRINATH</a>
+    </div>
     <div class="home">
         <a class="style-link" routerLink="/home"> Home </a>
     </div>
@@ -11,4 +14,15 @@
     <div class="contact">
         <a class="style-link" routerLink="/contact"> Contact </a>
     </div>
+    <button class="hamburger-icon nav-icon" (click)="toggleMenu()" [ngClass]="{'open': isToggle == true }">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <ul class="hamburger-menu" [ngClass]="{'checked': isToggle == true}">
+        <li class="menu-item"><a class="style-menu" routerLink="/home" (click)="onVisited()">Home</a></li>
+        <li class="menu-item"><a class="style-menu" routerLink="/portfolio" (click)="onVisited()">Portfolio</a></li>
+        <li class="menu-item"><a class="style-menu" routerLink="/about" (click)="onVisited()">About</a></li>
+        <li class="menu-item"><a class="style-menu" routerLink="/contact" (click)="onVisited()">Contact</a></li>
+    </ul>
 </section>

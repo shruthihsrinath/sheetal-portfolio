@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  isToggle: boolean = false;
+  constructor() { }
+  toggleMenu() {
+    this.isToggle = !this.isToggle;
+  }
 
+  onVisited() {
+    this.isToggle = !this.isToggle;
+  }
 }

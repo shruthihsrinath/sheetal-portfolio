@@ -16,6 +16,7 @@ html {
     --thumbBG: rgba(0, 0, 0, .3);
 }
 
+html,
 body {
     margin: 0;
 }
