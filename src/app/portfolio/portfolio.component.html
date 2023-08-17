@@ -1,6 +1,11 @@
 <article class="portfolio-page">
+    <ul class="image-gallery">
+        <li *ngFor="let image of portfolioImages" class="portfolio-card">
+            <img src="{{image.url}}" alt="{{image.altText}}" class="portfolio-image">
+        </li>
+    </ul>
     <h2 class="heading">COLLABS</h2><br />
-    <!-- <hr class="seperator" /><br /> -->
+    <hr class="seperator" /><br />
     <div class="collab-container">
         <div class="collab-card" *ngFor="let image of collabData">
             <img src="{{image.url}}" alt="image, for koskii collaboration link" class="collab-image"

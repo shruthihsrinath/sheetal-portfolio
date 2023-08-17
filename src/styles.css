@@ -14,7 +14,6 @@ html {
     color: black;
 
     --scrollbarBG: rgba(232, 82, 82, 0.179);
-    /* --scrollbarBG: rgba(225, 225, 225, 0.19); */
     --thumbBG: rgba(0, 0, 0, .3);
 }
 
