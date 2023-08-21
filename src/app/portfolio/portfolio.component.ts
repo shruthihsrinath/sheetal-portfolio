@@ -37,20 +37,10 @@ export class PortfolioComponent implements OnInit {
       this.portfolioImages = data.filter(collab => collab.collabName == 'PORTFOLIO');
     });
 
-    if (window.innerWidth <= 810) {
-      this.isMobile = true;
-    }
-    else {
-      this.isMobile = false;
-    }
+    this.isMobile = window.innerWidth <= 810;
 
     fromEvent(window, 'resize').subscribe(() => {
-      if (window.innerWidth <= 810) {
-        this.isMobile = true;
-      }
-      else {
-        this.isMobile = false;
-      }
+      this.isMobile = window.innerWidth <= 810;
     });
   }
 

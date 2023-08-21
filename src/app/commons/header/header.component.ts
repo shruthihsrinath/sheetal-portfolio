@@ -11,8 +11,4 @@ export class HeaderComponent {
   toggleMenu() {
     this.isToggle = !this.isToggle;
   }
-
-  onVisited() {
-    this.isToggle = !this.isToggle;
-  }
 }

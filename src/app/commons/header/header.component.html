@@ -20,9 +20,9 @@
         <span class="icon-bar"></span>
     </button>
     <ul class="hamburger-menu" [ngClass]="{'checked': isToggle == true}">
-        <li class="menu-item"><a class="style-menu" routerLink="/home" (click)="onVisited()">Home</a></li>
-        <li class="menu-item"><a class="style-menu" routerLink="/portfolio" (click)="onVisited()">Portfolio</a></li>
-        <li class="menu-item"><a class="style-menu" routerLink="/about" (click)="onVisited()">About</a></li>
-        <li class="menu-item"><a class="style-menu" routerLink="/contact" (click)="onVisited()">Contact</a></li>
+        <li class="menu-item"><a class="style-menu" routerLink="/home" (click)="toggleMenu()">Home</a></li>
+        <li class="menu-item"><a class="style-menu" routerLink="/portfolio" (click)="toggleMenu()">Portfolio</a></li>
+        <li class="menu-item"><a class="style-menu" routerLink="/about" (click)="toggleMenu()">About</a></li>
+        <li class="menu-item"><a class="style-menu" routerLink="/contact" (click)="toggleMenu()">Contact</a></li>
     </ul>
 </section>
