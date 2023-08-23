@@ -62,9 +62,7 @@
         font-size: 22px;
         height: fit-content;
     }
-}
 
-@media screen and (max-width: 500px) {
     .header-container {
         display: flex;
         flex-direction: column;
@@ -145,7 +143,6 @@
 
     /* hamburger menu styling */
     .hamburger-menu {
-        /* float: right; */
         list-style: none;
         margin: 0;
         display: -ms-grid;

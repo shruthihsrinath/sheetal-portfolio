@@ -19,6 +19,19 @@ html {
 html,
 body {
     margin: 0;
+    padding: 0;
+}
+
+
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    overflow: auto;
+    height: 100%;
+    overscroll-behavior: none;
 }
 
 * {
@@ -27,7 +40,6 @@ body {
 }
 
 *::-webkit-scrollbar {
-    height: 12px;
     background: var(--scrollbarBG);
 }
 

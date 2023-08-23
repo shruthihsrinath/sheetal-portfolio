@@ -40,7 +40,7 @@
 .model-name {
     /* font-family: 'Goblin One', cursive; */
     font-family: 'Original Surfer', cursive;
-    font-size: 70px;
+    font-size: 60px;
     display: flex;
     flex-flow: wrap;
     column-gap: 1rem;
