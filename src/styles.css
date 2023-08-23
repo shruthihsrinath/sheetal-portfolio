@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap');
 
 html {
-    /* background: linear-gradient(180deg, rgba(255, 185, 222, 1) 35%, rgba(216, 196, 255, 1) 100%); */
     background: linear-gradient(180deg, rgba(255, 185, 225, 1) 35%, rgba(255, 229, 196, 1) 100%);
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -17,13 +16,31 @@ html {
     --thumbBG: rgba(0, 0, 0, .3);
 }
 
+html,
 body {
     margin: 0;
+    padding: 0;
+}
+
+
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    overflow: auto;
+    height: 100%;
+    overscroll-behavior: none;
 }
 
 * {
     scrollbar-width: auto;
     scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+*::-webkit-scrollbar {
+    background: var(--scrollbarBG);
 }
 
 *::-webkit-scrollbar-track {

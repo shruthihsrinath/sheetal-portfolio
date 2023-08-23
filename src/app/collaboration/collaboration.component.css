@@ -34,18 +34,34 @@
 }
 
 .collab-image {
-    max-height: 100%;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
     vertical-align: bottom;
     transition: 3s;
+    width: 100%;
 }
 
 .collab-image:hover {
     transform: scale(1.2);
 }
 
+.heading {
+    margin: 0;
+    font-size: 25px;
+}
+
+.portfolio-link {
+    color: black;
+}
+
 @keyframes solidbackup {
     to {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    .collab {
+        width: 90vw;
     }
 }

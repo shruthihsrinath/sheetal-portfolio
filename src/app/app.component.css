@@ -13,13 +13,11 @@
 
 .main-content {
     grid-area: main;
-    scrollbar-width: none;
-    overflow-y: scroll;
     display: flex;
     flex-direction: column;
 }
 
 .main-footer {
     text-align: center;
-    margin-top: 5vh;
+    margin-top: 2vh;
 }
