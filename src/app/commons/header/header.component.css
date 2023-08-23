@@ -154,9 +154,6 @@
         height: 0;
         overflow: hidden;
         transition: height .4s ease;
-        z-index: 120;
-        -webkit-transition: all 0.3s ease;
-        transition: all 0.3s ease;
     }
 
     .menu-item:first-child {
