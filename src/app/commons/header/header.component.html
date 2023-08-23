@@ -1,6 +1,13 @@
 <section class="header-container">
-    <div class="name">
-        <a class="logo-link" routerLink="/home">SHEETAL SRINATH</a>
+    <div class="main">
+        <div class="name">
+            <a class="logo-link" routerLink="/home">SHEETAL SRINATH</a>
+        </div>
+        <button class="hamburger-icon nav-icon" (click)="toggleMenu()" [ngClass]="{'open': isToggle == true }">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
     </div>
     <div class="home">
         <a class="style-link" routerLink="/home"> Home </a>
@@ -14,14 +21,10 @@
     <div class="contact">
         <a class="style-link" routerLink="/contact"> Contact </a>
     </div>
-    <button class="hamburger-icon nav-icon" (click)="toggleMenu()" [ngClass]="{'open': isToggle == true }">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-    </button>
     <ul class="hamburger-menu" [ngClass]="{'checked': isToggle == true}">
         <li class="menu-item"><a class="style-menu" routerLink="/home" (click)="toggleMenu()">Home</a></li>
-        <li class="menu-item"><a class="style-menu" routerLink="/portfolio" (click)="toggleMenu()">Portfolio</a></li>
+        <li class="menu-item"><a class="style-menu" routerLink="/portfolio" (click)="toggleMenu()">Portfolio</a>
+        </li>
         <li class="menu-item"><a class="style-menu" routerLink="/about" (click)="toggleMenu()">About</a></li>
         <li class="menu-item"><a class="style-menu" routerLink="/contact" (click)="toggleMenu()">Contact</a></li>
     </ul>
