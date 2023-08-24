@@ -1,10 +1,11 @@
-#Netlify link
-
-https://shelly-portfolio.netlify.app
-
 # SheetalPortfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+
+## Netlify link
+
+https://shelly-portfolio.netlify.app
+
 
 ## Development server
 
