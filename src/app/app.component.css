@@ -21,3 +21,8 @@
     text-align: center;
     margin-top: 2vh;
 }
+
+.favicon {
+    text-decoration: none;
+    color: black;
+}
