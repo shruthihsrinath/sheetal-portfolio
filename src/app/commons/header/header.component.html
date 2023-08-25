@@ -3,7 +3,8 @@
         <div class="name">
             <a class="logo-link" routerLink="/home">SHEETAL SRINATH</a>
         </div>
-        <button class="hamburger-icon nav-icon" (click)="toggleMenu()" [ngClass]="{'open': isToggle }">
+        <button id="menubutton" class="hamburger-icon nav-icon" (click)="toggleMenu()" [ngClass]="{'open': isToggle}"
+            type="button" aria-haspopup="true" aria-controls="menu">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -21,11 +22,17 @@
     <div class="contact">
         <a class="style-link" routerLink="/contact"> Contact </a>
     </div>
-    <ul class="hamburger-menu" [ngClass]="{'checked': isToggle}">
-        <li class="menu-item"><a class="style-menu" routerLink="/home" (click)="toggleMenu()">Home</a></li>
-        <li class="menu-item"><a class="style-menu" routerLink="/portfolio" (click)="toggleMenu()">Portfolio</a>
+    <ul class="hamburger-menu" [ngClass]="{'checked': isToggle}" role="menu" aria-labelledby="menubutton">
+        <li class="menu-item" role="none"><a class="style-menu" routerLink="/home" (click)="toggleMenu()"
+                role="menuitem">Home</a></li>
+        <li class="menu-item" role="none"><a class="style-menu" routerLink="/portfolio" (click)="toggleMenu()"
+                role="menuitem">Portfolio</a>
         </li>
-        <li class="menu-item"><a class="style-menu" routerLink="/about" (click)="toggleMenu()">About</a></li>
-        <li class="menu-item"><a class="style-menu" routerLink="/contact" (click)="toggleMenu()">Contact</a></li>
+        <li class="menu-item" role="none"><a class="style-menu" routerLink="/about" (click)="toggleMenu()"
+                role="menuitem">About</a>
+        </li>
+        <li class="menu-item" role="none"><a class="style-menu" routerLink="/contact" (click)="toggleMenu()"
+                role="menuitem">Contact</a>
+        </li>
     </ul>
 </section>

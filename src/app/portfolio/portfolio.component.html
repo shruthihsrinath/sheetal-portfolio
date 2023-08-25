@@ -1,8 +1,8 @@
-<article class="portfolio-page">
+<article class="portfolio-page" tabindex="0">
     <div id="portfolio">
         <ul class="image-gallery">
             <li *ngFor="let image of portfolioImages" class="portfolio-card">
-                <a class="lightbox" title="click on image to zoom" *ngIf="isMobile== false">
+                <a class="lightbox" alt="click to zoom image, does not work on mobile" *ngIf="isMobile== false">
                     <img src="{{image.url}}" alt="{{image.altText}}" class="portfolio-image" (click)="zoomImage(image)">
                 </a>
                 <img src="{{image.url}}" alt="{{image.altText}}" class="portfolio-image" *ngIf="isMobile==true">
@@ -13,7 +13,7 @@
             <button class="lightbox-arrows direction-left" (click)="nextImage('left')" (keydown)="nextImage('left')">
                 <div class="lightbox-arrow lightbox-arrow-left"></div>
             </button>
-            <img src="{{currentPortfolioUrl}}" class="lightbox-image" alt="{{currentPortfolioAlt}}" />
+            <img src="{{currentPortfolioUrl}}" class="lightbox-image" />
             <button class="lightbox-arrows direction-right" (click)="nextImage('right')" (keydown)="nextImage('right')">
                 <div class="lightbox-arrow lightbox-arrow-right"></div>
             </button>
