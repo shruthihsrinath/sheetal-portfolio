@@ -1,11 +1,13 @@
 # SheetalPortfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+An interactive accessible Model Portfolio for my client Sheetal Srinath
 
 ## Netlify link
 
 https://shelly-portfolio.netlify.app
 
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
 
 ## Development server
 
